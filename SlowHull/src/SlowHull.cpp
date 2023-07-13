@@ -1,6 +1,6 @@
-#include "SlowHull.h"
-
+#include <glm/glm.hpp>
 #include <unordered_set>
+#include <vector>
 
 double DistanceToVector(const glm::vec3 &pt, const glm::vec3 &v) {
   return glm::length(pt - v * glm::dot(pt, v));
