@@ -90,7 +90,7 @@ std::vector<glm::ivec3> Hull(std::vector<glm::vec3> pts,
     auto tri = glm::ivec3(c, b, a);
     auto plane = PlaneOfPts(pts[a], pts[b], pts[c]);
     if (dropped.size() > 0) {
-      const int idx = dropped[dropped.size() - 1];
+      const int idx = dropped.back();
       triangles[idx] = tri;
       planes[idx] = plane;
       kept[idx] = true;
